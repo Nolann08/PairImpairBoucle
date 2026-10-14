@@ -13,17 +13,26 @@ class Program
          */
 
         int nombre;
-        Console.WriteLine("Choissisez un nombre : ");
-        nombre = Convert.ToInt32(Console.ReadLine());
-        if (nombre % 2 == 0)
-        {
-            Console.WriteLine("Pair");
-        }
-        else if  (nombre % 2 == 1)
-        {
-            Console.WriteLine("Impaire");
-        }
+        string continueTesting;
 
-        Console.WriteLine("Voulez vous re demander un nombre ? (y/n)");
+        do
+        {
+
+            Console.WriteLine("Choissisez un nombre : ");
+            nombre = Convert.ToInt32(Console.ReadLine());
+
+            if (nombre % 2 == 0)
+            {
+                Console.WriteLine("Pair");
+            }
+            else
+            {
+                Console.WriteLine("Impaire");
+            }
+
+            Console.WriteLine("Voulez vous re demander un nombre ? (y/n)");
+            continueTesting = Console.ReadLine();
+
+        } while (continueTesting == "y");
     }
 }
